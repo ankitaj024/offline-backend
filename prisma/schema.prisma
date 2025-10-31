@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("mongodb+srv://admin:keymouseit@offline.m6syn8g.mongodb.net/offline_forms?retryWrites=true&w=majority&appName=offline")
+}
+
+model FormEntry {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  clientId  String   @unique
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+
