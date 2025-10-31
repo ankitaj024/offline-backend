@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  url      = env("mongodb+srv://admin:keymouseit@offline.m6syn8g.mongodb.net/offline_forms?retryWrites=true&w=majority&appName=offline")
+  url      = "mongodb+srv://admin:keymouseit@offline.m6syn8g.mongodb.net/offline_forms?retryWrites=true&w=majority&appName=offline"
 }
 
 model FormEntry {
